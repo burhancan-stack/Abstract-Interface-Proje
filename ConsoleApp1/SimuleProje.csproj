@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <OpenApiReference Include="OpenAPIs\kpspublic.asmx">
+      <CodeGenerator>NSwagCSharp</CodeGenerator>
+      <SourceUri>https://tckimlik.nvi.gov.tr/service/kpspublic.asmx?op=TCKimlikNoDogrula</SourceUri>
+    </OpenApiReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Protobuf Include="Protos\kpspublic.asmx" GrpcServices="Client">
+      <SourceUri>https://tckimlik.nvi.gov.tr/service/kpspublic.asmx?op=TCKimlikNoDogrula</SourceUri>
+    </Protobuf>
+  </ItemGroup>
+
+</Project>
